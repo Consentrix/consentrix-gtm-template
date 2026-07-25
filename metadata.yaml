@@ -1,0 +1,5 @@
+homepage: "https://consentrix.org"
+documentation: "https://consentrix.org/docs/gtm-consent-mode"
+versions:
+  - sha: 87a19263d36a2e1e628a086a80a0c50aaf326755
+    changeNotes: Initial gallery release (Consentrix v0.51.0).
