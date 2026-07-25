@@ -1,7 +1,7 @@
 homepage: "https://consentrix.org"
 documentation: "https://consentrix.org/docs/gtm-consent-mode"
 versions:
-  - sha: 6abc48ea7a3c878d4cb157b853d59ef41d5bf80d
+  - sha: c3c2ae09b60a349a146683d66511c1b859cc8e08
     changeNotes: >-
       v2: brand icon, optional saved-consent restore from the consentrix_categories
       first-party cookie, optional url_passthrough and ads_data_redaction signals,
