@@ -7,7 +7,7 @@ ___INFO___
 {
   "type": "TAG",
   "id": "cvt_consentrix_consent_mode",
-  "version": 2,
+  "version": 1,
   "securityGroups": [],
   "displayName": "Consentrix Consent Mode",
   "categories": [
