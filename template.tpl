@@ -171,6 +171,10 @@ const readSavedConsent = () => {
   return parsed;
 };
 
+// Google-issued CMP developer ID for Consentrix — must be set as early as
+// possible on every execution path (Google tag platform requirement).
+gtagSet('developer_id.GdMTFjYz', true);
+
 if (data.command === 'default') {
   gtagSet({
     url_passthrough: data.urlPassthrough === true,
@@ -589,6 +593,10 @@ ___WEB_PERMISSIONS___
               {
                 "type": 1,
                 "string": "ads_data_redaction"
+              },
+              {
+                "type": 1,
+                "string": "developer_id.GdMTFjYz"
               }
             ]
           }
@@ -689,12 +697,25 @@ scenarios:
       personalization_storage: 'denied',
       security_storage: 'granted',
     });
+- name: Sets the Consentrix developer ID on every execution path
+  code: |-
+    mock('getCookieValues', () => []);
+    runCode({command: 'default', waitForUpdate: 500});
+    assertApi('gtagSet').wasCalledWith('developer_id.GdMTFjYz', true);
+    mock('copyFromDataLayer', (key) => ({
+      consentrix_analytics: true,
+      consentrix_marketing: true,
+      consentrix_functional: true,
+      consentrix_personalization: true,
+    })[key]);
+    runCode({command: 'update'});
+    assertApi('gtagSet').wasCalledWith('developer_id.GdMTFjYz', true);
 - name: Rejects unsupported commands
   code: |-
     runCode({command: 'unsupported'});
     assertApi('gtmOnFailure').wasCalled();
 ___NOTES___
-Consentrix Consent Mode template v2 (Consentrix v0.51.0).\n\nv2 adds: brand icon, optional saved-consent restore from the consentrix_categories first-party cookie, and optional url_passthrough / ads_data_redaction advertising-continuity signals.
+Consentrix Consent Mode template v2.1 (Consentrix v0.51.0).\n\nv2 adds: brand icon, optional saved-consent restore from the consentrix_categories first-party cookie, and optional url_passthrough / ads_data_redaction advertising-continuity signals. v2.1 adds the Google-issued CMP developer ID (developer_id.GdMTFjYz), set as early as possible on every execution path per the Google tag platform integration requirements.
 
 Installation:
 1. Create a default instance and fire it on Consent Initialization - All Pages.
