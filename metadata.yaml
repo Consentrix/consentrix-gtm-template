@@ -1,5 +1,5 @@
 homepage: "https://consentrix.org"
 documentation: "https://consentrix.org/docs/gtm-consent-mode"
 versions:
-  - sha: d7e621292461da637370250931c984f7e2f25d68
-    changeNotes: probe minimal
+  - sha: 31c1080d08f6be29c004a870002bb93e6e745f53
+    changeNotes: probe
