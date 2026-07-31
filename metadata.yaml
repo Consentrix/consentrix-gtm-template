@@ -1,17 +1,5 @@
 homepage: "https://consentrix.org"
 documentation: "https://consentrix.org/docs/gtm-consent-mode"
 versions:
-  - sha: 96ef4186fe2d3cb36f9e32e03529ccfa933a24cb
-    changeNotes: >-
-      v2.1: adds the Google-issued CMP developer ID (developer_id.GdMTFjYz), set
-      as early as possible on every execution path per the Google tag platform
-      integration requirements; write_data_layer permission extended; automated
-      test coverage expanded to 8 scenarios; template id normalized to the
-      standard gallery submission placeholder.
-  - sha: c3c2ae09b60a349a146683d66511c1b859cc8e08
-    changeNotes: >-
-      v2: brand icon, optional saved-consent restore from the consentrix_categories
-      first-party cookie, optional url_passthrough and ads_data_redaction signals,
-      and expanded automated test coverage (7 scenarios).
-  - sha: 87a19263d36a2e1e628a086a80a0c50aaf326755
-    changeNotes: Initial gallery release (Consentrix v0.51.0).
+  - sha: d7e621292461da637370250931c984f7e2f25d68
+    changeNotes: probe minimal
