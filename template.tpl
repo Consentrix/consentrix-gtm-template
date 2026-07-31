@@ -6,7 +6,7 @@ Google may provide), as modified from time to time.
 ___INFO___
 {
   "type": "TAG",
-  "id": "cvt_consentrix_consent_mode",
+  "id": "cvt_temp_public_id",
   "version": 1,
   "securityGroups": [],
   "displayName": "Consentrix Consent Mode",
@@ -715,7 +715,7 @@ scenarios:
     runCode({command: 'unsupported'});
     assertApi('gtmOnFailure').wasCalled();
 ___NOTES___
-Consentrix Consent Mode template v2.1 (Consentrix v0.51.0).\n\nv2 adds: brand icon, optional saved-consent restore from the consentrix_categories first-party cookie, and optional url_passthrough / ads_data_redaction advertising-continuity signals. v2.1 adds the Google-issued CMP developer ID (developer_id.GdMTFjYz), set as early as possible on every execution path per the Google tag platform integration requirements.
+Consentrix Consent Mode template v2.1 (Consentrix v0.51.0). v2 adds: brand icon, optional saved-consent restore from the consentrix_categories first-party cookie, and optional url_passthrough / ads_data_redaction advertising-continuity signals. v2.1 adds the Google-issued CMP developer ID (developer_id.GdMTFjYz), set as early as possible on every execution path per the Google tag platform integration requirements.
 
 Installation:
 1. Create a default instance and fire it on Consent Initialization - All Pages.
