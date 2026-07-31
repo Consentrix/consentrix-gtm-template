@@ -1,5 +1,9 @@
 homepage: "https://consentrix.org"
 documentation: "https://consentrix.org/docs/gtm-consent-mode"
 versions:
-  - sha: 31c1080d08f6be29c004a870002bb93e6e745f53
-    changeNotes: probe
+  - sha: e4aed847cd8909d242058cdee026252d4b4da7ab
+    changeNotes: >-
+      v2.1: Google CMP developer ID (developer_id.GdMTFjYz) set on every execution
+      path; brand icon; saved-consent restore from the consentrix_categories
+      first-party cookie; optional url_passthrough and ads_data_redaction signals;
+      8 automated test scenarios.
