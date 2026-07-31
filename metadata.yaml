@@ -1,7 +1,7 @@
 homepage: "https://consentrix.org"
 documentation: "https://consentrix.org/docs/gtm-consent-mode"
 versions:
-  - sha: ce5a0125cdb5c2c1b78d347973568f36ae27c200
+  - sha: 96ef4186fe2d3cb36f9e32e03529ccfa933a24cb
     changeNotes: >-
       v2.1: adds the Google-issued CMP developer ID (developer_id.GdMTFjYz), set
       as early as possible on every execution path per the Google tag platform
